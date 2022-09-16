@@ -20,20 +20,25 @@ export default {
 </script>
 
 <style>
+h2 {
+  font-size: 1rem;
+  text-align: center;
+}
 .Img {
-  width: 37%;
+  width: 100%;
 }
 .Note-Card {
   width: 30%;
   height: 45%;
-  margin: 2rem;
-  align-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .Notes {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
   flex-direction: row;
+  align-content: center;
   justify-content: space-evenly;
 }
 </style>
