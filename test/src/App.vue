@@ -3,8 +3,11 @@
     <h1>Music Note Sightreading</h1>
     <h2>Treble and Bass Clef Only</h2>
     <h2>Alto and Tenor Clef are unavailable.</h2>
-    <h2>21 Notes in Total: 2 Octave Lower A to Upper F</h2>
+    <h2>20 Notes in Total: 2 Octaves Lower A to 2 Octaves Upper F</h2>
     <h2>(In Comparsion to Middle C)</h2>
+    <button v-on:click="ImgDisplay">Click to get a new Note</button>
+    <h2></h2>
+    <img class="WholeNote" :src="Display" alt="Whole Note"/>
 </div>
 </template>
 
@@ -12,7 +15,7 @@
 
 export default {
     name: "TBD",
-    components: { },
+    components: {},
     data () {
         return {
             Notes: [
@@ -103,7 +106,13 @@ export default {
             ],
         }
     },
-    methods: {},
+    methods: {
+        ImgDisplay () {
+            var PIC = Math.floor(Math.random()*this.Notes.length);
+            var Display = this.Notes[PIC].Img;
+            console.log(Display);
+        },
+    },
     }
 </script>
 
@@ -115,6 +124,7 @@ body,
   margin: 0%;
   padding: 0%;
   text-align: center;
+  align-content: center;
 }
 h1 {
     font-size: 2rem;
@@ -122,7 +132,7 @@ h1 {
 h2 {
     font-size: 1.5rem;
 }
-.Scale {
-    height: 25%;
+.WholeNote {
+    height: 55%;
 }
 </style>
