@@ -5,9 +5,10 @@
     <h2>Alto and Tenor Clef are unavailable.</h2>
     <h2>20 Notes in Total: 2 Octaves Lower A to 2 Octaves Upper F</h2>
     <h2>(In Comparsion to Middle C)</h2>
-    <button v-on:click="ImgDisplay">Click to get a new Note</button>
+    <button v-on:click="NotesDisplay">Click to get a new Note</button>
     <h2></h2>
-    <img class="WholeNote" :src="Display" alt="Whole Note"/>
+    <img class="NoteIMG" :src="Picture" alt="Whole Note"/>
+    <h2 class="NoteName"> The Name</h2>
 </div>
 </template>
 
@@ -18,6 +19,8 @@ export default {
     components: {},
     data () {
         return {
+            Picture: "",
+            NoteName: "",
             Notes: [
                 {
                     Name: "C",
@@ -107,10 +110,14 @@ export default {
         }
     },
     methods: {
-        ImgDisplay () {
-            var PIC = Math.floor(Math.random()*this.Notes.length);
-            var Display = this.Notes[PIC].Img;
-            console.log(Display);
+        NotesDisplay () {
+            var Display = Math.floor(Math.random()*this.Notes.length);
+            var PIC = this.Notes[Display].Img;
+            var NN = this.Notes[Display].Name;
+            console.log(PIC);
+            console.log(NN);
+            this.Picture = PIC;
+            this.NoteName = NN;
         },
     },
     }
@@ -123,6 +130,7 @@ body,
 * {
   margin: 0%;
   padding: 0%;
+  color: black;
   text-align: center;
   align-content: center;
 }
@@ -132,7 +140,18 @@ h1 {
 h2 {
     font-size: 1.5rem;
 }
-.WholeNote {
+.NoteIMG {
     height: 55%;
+    margin-top: 5px;
+}
+.NoteName {
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-decoration: overline underline;     
+    text-decoration-color: darkslategray;  
+}
+.NoteName:hover {
+    color: black;
 }
 </style>
