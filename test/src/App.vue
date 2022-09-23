@@ -8,7 +8,8 @@
     <button v-on:click="NotesDisplay">Click to get a new Note</button>
     <h2></h2>
     <img class="NoteIMG" :src="Picture" alt="Whole Note"/>
-    <h2 class="NoteName"> The Name</h2>
+    <h2>Hover below to check the note name.</h2>
+    <h2 class="NoteName"> The Note Name is {{ NoteName }}.</h2>
 </div>
 </template>
 
@@ -114,8 +115,6 @@ export default {
             var Display = Math.floor(Math.random()*this.Notes.length);
             var PIC = this.Notes[Display].Img;
             var NN = this.Notes[Display].Name;
-            console.log(PIC);
-            console.log(NN);
             this.Picture = PIC;
             this.NoteName = NN;
         },
@@ -147,9 +146,7 @@ h2 {
 .NoteName {
     color: white;
     margin-top: 5px;
-    margin-bottom: 5px;
-    text-decoration: overline underline;     
-    text-decoration-color: darkslategray;  
+    border: 2px solid darkslateblue;
 }
 .NoteName:hover {
     color: black;
