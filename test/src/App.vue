@@ -24,7 +24,7 @@ export default {
             NoteName: "",
             Notes: [
                 {
-                    Name: "C",
+                    Name: "Middle C",
                     Img: "https://th.bing.com/th/id/R.4a38845654d2e3487c0be4fc535291d0?rik=jvkK3hdbr4OhVA&riu=http%3a%2f%2fxoax.net%2fchildren%2fref%2fmusic%2fincl%2fscales_octaves%2fmiddle_c_treble_clef.png&ehk=aYg3F0pjbwYRjhTqMWhLM1SIV6kYuTYoBE%2bFwK5vPuM%3d&risl=&pid=ImgRaw&r=0",
                 },
                 {
@@ -68,7 +68,7 @@ export default {
                     Img: "https://th.bing.com/th/id/OIP.2H-SrOenmgtUyKX0P16Y6gHaGr?w=174&h=180&c=7&r=0&o=5&pid=1.7",
                 },
                 {
-                    Name: "C",
+                    Name: "Middle C",
                     Img: "https://th.bing.com/th/id/OIP.108ZW2BZHPaGKlC5xRngPAAAAA?w=189&h=106&c=7&r=0&o=5&pid=1.7",
                 },
                 {
